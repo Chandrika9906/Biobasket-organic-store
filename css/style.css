@@ -1,0 +1,128 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header bar */
+.top-bar {
+    background-color: #f1f8e9;
+    height: 90px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Menu */
+.menu {
+    list-style: none;          /* remove dots */
+    display: flex;             /* horizontal */
+    gap: 25px;
+}
+
+/* Menu items */
+.menu > li {
+    position: relative;
+    cursor: pointer;
+    font-size: 15px;
+    color: #2e7d32;
+}
+
+/* Dropdown arrow */
+.menu i {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    list-style: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: white;
+    border-radius: 6px;
+    min-width: 160px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 100;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+    padding: 10px;
+    color: #333;
+}
+
+.dropdown-menu li:hover {
+    background-color: #e8f5e9;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Navbar icons */
+.navbar a {
+    margin-left: 20px;
+    font-size: 20px;
+    color: black;          /* black icons */
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: #2e7d32;
+}
+/* HERO SECTION BELOW HEADER */
+.hero-section {
+    height: calc(100vh - 90px); /* full screen minus header height */
+    background: url("../images/organicbackground.jpeg") no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+/* Dark overlay for readability */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* Content inside image */
+.hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.hero-btn {
+    background-color: #2e7d32;
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 16px;
+}
+
+.hero-btn:hover {
+    background-color: #1b5e20;
+}
